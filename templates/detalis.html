@@ -1,0 +1,22 @@
+{% extends 'home.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{obj.img.url}}" width="300">
+        </div>
+        <div class="col-md-6">
+            <h3 style="color:white">{{obj.name}}</h3>
+            <h5>{{obj.year}}</h5>
+<h6 style="color:white">
+    {{obj.desc}}
+</h6>
+<a href="{% url 'update' obj.id %}" class="btn btn-warning">UPDATE</a>
+<a href="{% url 'delete' obj.id %}" class="btn btn-warning">DELETE</a>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
